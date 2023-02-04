@@ -13,67 +13,77 @@
 <body>
     <div class="calculator">
         <h2 class="calculator__title">Калькулятор экономии</h2>
-        <form action="">
-            <div class="calculator__item">
-                <label for="area">Площадь полей, Га</label>
-                <input class="calculator__input" type="number" id="area" name="area" value="">
+        <form class="calculator__form" action="">
+            <div class="calculator__list">
+                <div class="calculator__item">
+                    <label for="area">Площадь полей, Га</label>
+                    <input class="calculator__input" type="number" id="area" name="area" value="4000">
+                </div>
+                <div class=" calculator__item">
+                    <label for="width">Ширина захвата орудия, метр</label>
+                    <input class="calculator__input" type="number" id="width" name="width">
+                </div>
+                <div class="calculator__item">
+                    <label for="materialCost">Стоимость посевного материала, руб\кг</label>
+                    <input class="calculator__input" type="number" id="materialCost" name="materialCost">
+                </div>
+                <div class="calculator__item">
+                    <label for="seeds">Норма внесения семян кг\га</label>
+                    <input class="calculator__input" type="number" id="seeds" name="seeds">
+                </div>
+                <div class="calculator__item">
+                    <label for="fertilizerCost">Стоимость удобрений, руб\кг</label>
+                    <input class="calculator__input" type="number" id="fertilizerCost" name="fertilizerCost">
+                </div>
+                <div class="calculator__item">
+                    <label for="fertilizer">Норма несения удобрения кг\га</label>
+                    <input class="calculator__input" type="number" id="fertilizer" name="fertilizer">
+                </div>
+                <div class="calculator__item">
+                    <label for="consumption"> Расход ГСМ л\га</label>
+                    <input class="calculator__input" type="number" id="consumption" name="consumption">
+                </div>
+                <div class="calculator__item">
+                    <label for="costFuel">Стоимось ГСМ рул\литр</label>
+                    <input class="calculator__input" type="number" id="costFuel" name="costFuel">
+                </div>
+                <div class="calculator__item">
+                    <label for="manual">точность на ручном управлении, см</label>
+                    <input class="calculator__input" type="number" id="manual" name="manual">
+                </div>
+                <div class="calculator__item">
+                    <label for="RTK">точность RTK, см</label>
+                    <input class="calculator__input" type="number" id="RTK" name="RTK">
+                </div>
+                <button type="button" class="calculator__start" onclick="calculate()">Рассчитать</button>
             </div>
-            <div class="calculator__item">
-                <label for="width">Ширина захвата орудия, метр</label>
-                <input class="calculator__input" type="number" id="width" name="width">
-            </div>
-            <div class="calculator__item">
-                <label for="materialCost">Стоимость посевного материала, руб\кг</label>
-                <input class="calculator__input" type="number" id="materialCost" name="materialCost">
-            </div>
-            <div class="calculator__item">
-                <label for="seeds">Норма внесения семян кг\га</label>
-                <input class="calculator__input" type="number" id="seeds" name="seeds">
-            </div>
-            <div class="calculator__item">
-                <label for="fertilizerCost">Стоимость удобрений, руб\кг</label>
-                <input class="calculator__input" type="number" id="fertilizerCost" name="fertilizerCost">
-            </div>
-            <div class="calculator__item">
-                <label for="fertilizer">Норма несения удобрения кг\га</label>
-                <input class="calculator__input" type="number" id="fertilizer" name="fertilizer">
-            </div>
-            <div class="calculator__item">
-                <label for="consumption"> Расход ГСМ л\га</label>
-                <input class="calculator__input" type="number" id="consumption" name="consumption">
-            </div>
-            <div class="calculator__item">
-                <label for="costFuel">Стоимось ГСМ рул\литр</label>
-                <input class="calculator__input" type="number" id="costFuel" name="costFuel">
-            </div>
-            <button type="submit" class="calculator__start" onclick="Calculate()">Рассчитать</button>
-            <div class="calculation">
+            <div class="calculation" id="calculation">
                 <div class="calculation__top">
                     <div class="calculation__item">
                         <span class="calculation__title">Количество проходов без перекрытия</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result1"></span>
                     </div>
                     <div class="calculation__item">
                         <span class="calculation__title">Количество проходов с учётом перекрытий</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result2"></span>
                     </div>
                     <div class="calculation__item">
                         <span class="calculation__title">Кол-во лишних Га</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result3"></span>
                     </div>
                 </div>
                 <div class="calculation__all">
                     <div class="calculation__item">
                         <span class="calculation__title">Стоимость пересеянных семян</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result4"></span>
                     </div>
                     <div class="calculation__item">
                         <span class="calculation__title">Стоимость удобрений</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result5"></span>
                     </div>
                     <div class="calculation__item">
                         <span class="calculation__title">Стоимость ГСМ</span>
-                        <span class="calculation__value"></span>
+                        <span class="calculation__value" id="result6"></span>
                     </div>
                 </div>
             </div>
