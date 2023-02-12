@@ -17,15 +17,15 @@
             <div class="calculator__list">
                 <div class="calculator__item">
                     <label for="area">Площадь полей, Га</label>
-                    <input class="calculator__input" type="number" id="area" name="area" value="4000">
+                    <input class="calculator__input" type="number" id="area" name="area" required>
                 </div>
                 <div class=" calculator__item">
                     <label for="width">Ширина захвата орудия, метр</label>
-                    <input class="calculator__input" type="number" id="width" name="width">
+                    <input class="calculator__input" type="number" id="width" name="width" required>
                 </div>
                 <div class="calculator__item">
                     <label for="materialCost">Стоимость посевного материала, руб\кг</label>
-                    <input class="calculator__input" type="number" id="materialCost" name="materialCost">
+                    <input class="calculator__input" type="number" id="materialCost" name="materialCost" required>
                 </div>
                 <div class="calculator__item">
                     <label for="seeds">Норма внесения семян кг\га</label>
@@ -55,7 +55,7 @@
                     <label for="RTK">точность RTK, см</label>
                     <input class="calculator__input" type="number" id="RTK" name="RTK">
                 </div>
-                <button type="button" class="calculator__start" onclick="calculate()">Рассчитать</button>
+                <button type="button" disabled class="calculator__start" onclick="calculate()">Рассчитать</button>
             </div>
             <div class="calculation" id="calculation">
                 <div class="calculation__top">
